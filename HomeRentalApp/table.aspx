@@ -76,8 +76,10 @@
                             
                             <div class="d-none d-sm-block topbar-divider"></div>
                             <li class="nav-item dropdown no-arrow">
-                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#"><span class="d-none d-lg-inline me-2 text-gray-600 small">Rituparna Parija</span><img class="border rounded-circle img-profile" src="assets1/img/avatars/avatar1.jpeg"/></a>
+                                <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">
+                                    <span id="lblUserName" runat="server"></span><img class="border rounded-circle img-profile" src="assets1/img/avatars/avatar1.jpeg"/></a>
                                     <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in"><a class="dropdown-item" href="profile.html"><i class="fas fa-user fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="dashboard.html"><i class="fas fa-list fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Activity log</a>
+
                                         <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Logout</a>
                                     </div>
                                 </div>
@@ -89,7 +91,7 @@
                     <h3 class="text-dark mb-4">Rent</h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 fw-bold">Available Places</p>
+                <p class="text-primary m-0 fw-bold">Available city</p>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -105,160 +107,41 @@
                                     <div class="text-md-end dataTables_filter" id="dataTable_filter"><label class="form-label"><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search"/></label></div>
                                 </div>
                             </div>
-                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
-                                <table class="table my-0" id="dataTable">
-                                    <thead>
-                                        <tr>
-                                            <th>Owner's Name</th>
-                                            <th>Location</th>
-                                            <th>Description</th>
-                                            <th>Pin</th>
-                                            <th>Start date</th>
-                                            <th>Price</th>
-                                            <th>Check</th>
-                                            <th>Book Now</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets1/img/avatars/avatar1.jpeg">Amita Pritam</td>
-                                            <td>Bhubaneswar</td>
-                                            <td>3BHK</td>
-                                            <td>754140</td>
-                                            <td>2008/11/28</td>
-                                            <td>16,700</td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="amita.html">&nbsp;Check</a></td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="booking.aspx"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Book</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets1/img/avatars/avatar2.jpeg">Baisalya Roul</td>
-                                            <td>Bhubaneswar</td>
-                                            <td>2BHK</td>
-                                            <td>759087</td>
-                                            <td>2009/10/09<br></td>
-                                            <td>12,000</td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="baisalya.html">&nbsp;Check</a></td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="booking.aspx"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Book</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets1/img/avatars/avatar3.jpeg">Sayel Paul</td>
-                                            <td>Cuttack</td>
-                                            <td>3BHK</td>
-                                            <td>752176</td>
-                                            <td>2009/01/12<br></td>
-                                            <td>18,000</td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="sayel.html">&nbsp;Check</a></td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="booking.aspx"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Book</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets1/img/avatars/avatar4.jpeg">Monalisha Lenka</td>
-                                            <td>Khurdha</td>
-                                            <td>1BHK</td>
-                                            <td>751234</td>
-                                            <td>2012/10/13<br></td>
-                                            <td>1,500</td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="monalisha.html">&nbsp;Check</a></td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="booking.aspx"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Book</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets1/img/avatars/avatar5.jpeg">Mitali Sahoo</td>
-                                            <td>Bhubaneswar</td>
-                                            <td>1BHK</td>
-                                            <td>756845</td>
-                                            <td>2011/06/07<br></td>
-                                            <td>2,850</td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="mitali.html">&nbsp;Check</a></td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="booking.aspx"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Book</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets1/img/avatars/avatar1.jpeg">Arijit Pattnaik</td>
-                                            <td>Khurdha</td>
-                                            <td>2BHK</td>
-                                            <td>752109</td>
-                                            <td>2012/12/02<br></td>
-                                            <td>7,000</td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="arijit.html">&nbsp;Check</a></td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="booking.aspx"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Book</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets1/img/avatars/avatar2.jpeg">Rakesh Nayak<br></td>
-                                            <td>Bhubaneswar</td>
-                                            <td>2BHK</td>
-                                            <td>750002</td>
-                                            <td>2011/05/03<br></td>
-                                            <td>3,500</td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="rakesh.html">&nbsp;Check</a></td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="booking.aspx"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Book</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets1/img/avatars/avatar3.jpeg">Sailendra Parida</td>
-                                            <td>Khurdha</td>
-                                            <td>1BHK</td>
-                                            <td>756710</td>
-                                            <td>2011/12/12<br></td>
-                                            <td>2,450</td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="sailendra.html">&nbsp;Check</a></td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="booking.aspx"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Book</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets1/img/avatars/avatar4.jpeg">Soumya Ranjan Dash</td>
-                                            <td>Cuttack</td>
-                                            <td>1BHK</td>
-                                            <td>754142</td>
-                                            <td>2011/12/06<br></td>
-                                            <td>1,600</td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="soumya.html">&nbsp;Check</a></td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="booking.aspx"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Book</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td><img class="rounded-circle me-2" width="30" height="30" src="assets1/img/avatars/avatar5.jpeg">Badri Prasad</td>
-                                            <td>Bhubaneswar</td>
-                                            <td>2BHK</td>
-                                            <td>752050</td>
-                                            <td>2012/03/29<br/></td>
-                                            <td>14,060</td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="badri.html">&nbsp;Check</a></td>
-                                            <td><a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="booking.aspx"><i class="fas fa-download fa-sm text-white-50"></i>&nbsp;Book</a></td>
+                            <form id="form1" runat="server">
+                         <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                       <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+                            <Columns>
+                         <asp:BoundField DataField="city_name" HeaderText="City Name" />
+                         <asp:BoundField DataField="num_homes" HeaderText="No Of Houses" />
+                        <asp:TemplateField HeaderText="Check">
+                        <ItemTemplate>
+                        <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href="houses.aspx?city_id=<%# Eval("city_id") %>">&nbsp;Check</a>
+                        </ItemTemplate>
+                        </asp:TemplateField>
+                   </Columns>
+    </asp:GridView>
+    <div class="row">
+        <div class="col-md-6 align-self-center">
+            <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
+        </div>
+        <div class="col-md-6">
+            <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+ </form>
 
-                                        </tr>
-                                    </tbody>
-                                    <tfoot>
-                                        <tr>
-                                            <td><strong>Owner's Name</strong></td>
-                                            <td><strong>Location</strong></td>
-                                            <td><strong>Description</strong></td>
-                                            <td><strong>Pin</strong></td>
-                                            <td><strong>Start date</strong></td>
-                                            <td><strong>Price</strong></td>
-                                            <td><strong>Check</strong></td>
-                                            <td><strong>Book Now</strong></td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 align-self-center">
-                                    <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
-                                </div>
-                                <div class="col-md-6">
-                                    <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
-                                        <ul class="pagination">
-                                            <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2023</span></div>
+                    <div class="text-center my-auto copyright"><span>PassonateTechLife © Brand 2023</span></div>
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
