@@ -51,6 +51,15 @@ namespace HomeRentalApp
         protected global::System.Web.UI.WebControls.TextBox txtPricePerMonth;
 
         /// <summary>
+        /// txttotalrent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txttotalrent;
+
+        /// <summary>
         /// txtHomeName control.
         /// </summary>
         /// <remarks>
@@ -58,5 +67,32 @@ namespace HomeRentalApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtHomeName;
+
+        /// <summary>
+        /// exampleNumberInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl exampleNumberInput;
+
+        /// <summary>
+        /// noofmonths control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl noofmonths;
+
+        /// <summary>
+        /// btnConfirmBooking control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConfirmBooking;
     }
 }

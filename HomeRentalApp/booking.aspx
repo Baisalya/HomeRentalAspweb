@@ -26,36 +26,65 @@
                             </div>
                             <form id="form1" runat="server">
     <div class="row mb-3">
-        <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="date" id="txtStartDate" name="start-date" runat="server" placeholder="start-date" onchange="updateEndDate()" /></div>
-        <div class="col-sm-6"><input class="form-control form-control-user" type="date" id="txtEndDate" name="end-date" runat="server" placeholder="end-date" disabled /></div>
+        <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="date" id="txtStartDate" name="start-date" runat="server" placeholder="start-date"  /></div>
+        <div class="col-sm-6"><input class="form-control form-control-user" type="date" id="txtEndDate" name="end-date" runat="server" placeholder="end-date" readonly  /></div>
     </div>
     <div class="mb-3"><asp:TextBox class="form-control form-control-user" type="text" id="txtPricePerMonth" runat="server" aria-describedby="emailHelp"  ReadOnly="true"/></div>
+    <div class="mb-3"><asp:TextBox class="form-control form-control-user" type="text" id="txttotalrent" runat="server" aria-describedby="emailHelp"  ReadOnly="true"/></div>
+
     <div class="mb-3"><asp:TextBox class="form-control form-control-user" type="text"  id="txtHomeName" runat="server" aria-describedby="addressHelp" placeholder="Current Address"  ReadOnly="true"/></div>
 
     <div class="row mb-3">
-        <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="number" id="exampleNumberInput" placeholder="Mobile No." name="mobile"/></div>
-        <div class="col-sm-6"><input class="form-control form-control-user" type="number" id="exampleGuestInput" placeholder="Number of Guest" name="guest"/></div>
+        <div class="col-sm-6 mb-3 mb-sm-0"><div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="number" id="exampleNumberInput" placeholder="Mobile No." name="mobile" runat="server" /></div></div>
+        <div class="col-sm-6">    <div class="col-sm-6"><input class="form-control form-control-user" type="number" id="noofmonths" placeholder="Number of Months" name="months" runat="server" /></div></div>
     </div>
                                 
-                                
-    <button class="btn btn-primary d-block btn-user w-100" type="submit">Confirm Booking</button>
+       <asp:Button ID="btnConfirmBooking" runat="server" Text="Confirm Booking" OnClick="btnConfirmBooking_Click" CssClass="btn btn-primary d-block btn-user w-100" />
+                         
                                 
     <hr>
 </form>
 
-                      <script>
-                          function updateEndDate() {
-                              var startDate = new Date(document.getElementById("txtStartDate").value);
-                              if (startDate) {
-                                  var endDate = new Date(startDate.getTime() + (30 * 24 * 60 * 60 * 1000));
-                                  var endDateInput = document.getElementById("txtEndDate");
-                                  endDateInput.min = endDate.toISOString().split('T')[0];
-                                  endDateInput.disabled = false;
-                              }
-                          }
-}                            </script>
+<script>
+    // get the start date and end date input elements
+    var startDateInput = document.getElementById("txtStartDate");
+    var endDateInput = document.getElementById("txtEndDate");
 
-                            <div class="text-center"><a class="small" href="dashboard.aspx">Go back</a></div>
+    // get the price per month and total rent input elements
+    var pricePerMonthInput = document.getElementById("txtPricePerMonth");
+    var totalRentInput = document.getElementById("txttotalrent");
+
+    // handle the start date change event
+    startDateInput.addEventListener("change", function () {
+        updateEndDate();
+    });
+
+    // handle the number of months change event
+    var noOfMonthsInput = document.getElementById("noofmonths");
+    noOfMonthsInput.addEventListener("change", function () {
+        updateEndDate();
+        updateTotalRent();
+    });
+
+    // function to update the end date based on the start date and number of months
+    function updateEndDate() {
+        var startDate = new Date(startDateInput.value);
+        var noOfMonths = parseInt(noOfMonthsInput.value);
+        var endDate = new Date(startDate.getFullYear(), startDate.getMonth() + noOfMonths, 0);
+        endDateInput.value = endDate.toISOString().slice(0, 10);
+    }
+
+    // function to update the total rent based on the price per month and number of months
+    function updateTotalRent() {
+        var pricePerMonth = parseFloat(pricePerMonthInput.value);
+        var noOfMonths = parseInt(noOfMonthsInput.value);
+        var totalRent = pricePerMonth * noOfMonths;
+        totalRentInput.value = totalRent.toFixed(2);
+    }
+</script>
+
+
+                            <div class="text-center"><a clahtmlsmall" href="dashboard.aspx">Go back</a></div>
                             
                         </div>
                     </div>
