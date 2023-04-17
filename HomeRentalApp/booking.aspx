@@ -24,25 +24,38 @@
                             <div class="text-center">
                                 <h4 class="text-dark mb-4">Book your home now!</h4>
                             </div>
-                            <form class="user" id="form3" action="booking.aspx" method="post">
-                                <div class="row mb-3">
-                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="First Name" name="first_name"/></div>
-                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text" id="exampleFirstName" placeholder="Last Name" name="last_name"/></div>
-                                </div>
-                                <div class="mb-3"><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email Address" name="email"/></div>
-                                <div class="mb-3"><input class="form-control form-control-user" type="text" id="exampleInputAddress" aria-describedby="addressHelp" placeholder="Current Address" name="address"/></div>
+                            <form id="form1" runat="server">
+    <div class="row mb-3">
+        <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="date" id="txtStartDate" name="start-date" runat="server" placeholder="start-date" onchange="updateEndDate()" /></div>
+        <div class="col-sm-6"><input class="form-control form-control-user" type="date" id="txtEndDate" name="end-date" runat="server" placeholder="end-date" disabled /></div>
+    </div>
+    <div class="mb-3"><asp:TextBox class="form-control form-control-user" type="text" id="txtPricePerMonth" runat="server" aria-describedby="emailHelp"  ReadOnly="true"/></div>
+    <div class="mb-3"><asp:TextBox class="form-control form-control-user" type="text"  id="txtHomeName" runat="server" aria-describedby="addressHelp" placeholder="Current Address"  ReadOnly="true"/></div>
 
-                                <div class="row mb-3">
-                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="number" id="exampleNumberInput" placeholder="Mobile No." name="mobile"/></div>
-                                    <div class="col-sm-6"><input class="form-control form-control-user" type="number" id="exampleGuestInput" placeholder="Number of Guest" name="guest"/></div>
-                                </div>
+    <div class="row mb-3">
+        <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="number" id="exampleNumberInput" placeholder="Mobile No." name="mobile"/></div>
+        <div class="col-sm-6"><input class="form-control form-control-user" type="number" id="exampleGuestInput" placeholder="Number of Guest" name="guest"/></div>
+    </div>
                                 
                                 
-                                <button class="btn btn-primary d-block btn-user w-100" type="submit">Confirm Booking</button>
+    <button class="btn btn-primary d-block btn-user w-100" type="submit">Confirm Booking</button>
                                 
-                                <hr>
-                            </form>
-                            <div class="text-center"><a class="small" href="dashboard.html">Go back</a></div>
+    <hr>
+</form>
+
+                      <script>
+                          function updateEndDate() {
+                              var startDate = new Date(document.getElementById("txtStartDate").value);
+                              if (startDate) {
+                                  var endDate = new Date(startDate.getTime() + (30 * 24 * 60 * 60 * 1000));
+                                  var endDateInput = document.getElementById("txtEndDate");
+                                  endDateInput.min = endDate.toISOString().split('T')[0];
+                                  endDateInput.disabled = false;
+                              }
+                          }
+}                            </script>
+
+                            <div class="text-center"><a class="small" href="dashboard.aspx">Go back</a></div>
                             
                         </div>
                     </div>

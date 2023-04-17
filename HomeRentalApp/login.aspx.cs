@@ -32,9 +32,12 @@ namespace HomeRentalApp
                 if (sdr.Read())
                 {
                     // User is authenticated, retrieve their name and store it in a session variable
+                    int userId = Convert.ToInt32(sdr["user_id"]);
+                    Session["UserId"] = userId;
                     string userName = sdr["name"].ToString();
                     Session["UserName"] = userName;
-                    Session["Email"] = email; // Store the email ID in a session variable
+                    Session["Email"] = email;
+                    // Store the email ID in a session variable
 
                     // Redirect to dashboard
                     Response.Redirect("dashboard.aspx");

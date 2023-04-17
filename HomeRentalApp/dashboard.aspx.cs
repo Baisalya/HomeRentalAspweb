@@ -16,9 +16,11 @@ namespace HomeRentalApp
             {
                 if (Session["UserName"] != null)
                 {
+                   
                     string userName = Session["UserName"].ToString();
                     lblUserName.InnerHtml = "Welcome, <span class='d-none d-lg-inline me-2 text-gray-600 small'>" + userName + "</span>";
                 }
+                else { Response.Redirect("login.aspx"); }
             }
         }
         protected void lnkLogout_Click(object sender, EventArgs e)

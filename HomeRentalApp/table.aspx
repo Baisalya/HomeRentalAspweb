@@ -87,6 +87,7 @@
                         </ul>
                     </div>
                 </nav>
+                </div>
                 <div class="container-fluid">
                     <h3 class="text-dark mb-4">Rent</h3>
                     <div class="card shadow">
@@ -120,6 +121,7 @@
                         </asp:TemplateField>
                    </Columns>
     </asp:GridView>
+
     <div class="row">
         <div class="col-md-6 align-self-center">
             <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
