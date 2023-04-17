@@ -97,20 +97,14 @@ namespace HomeRentalApp
             if (DateTime.TryParseExact(txtStartDate.Value, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out startDate)
                 && DateTime.TryParseExact(txtEndDate.Value, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out endDate))
             {
-                // Both start date and end date were parsed successfully
             }
             else
             {
-                // An error occurred while parsing one or both dates
+                
             }
           
 
-            /*  if (!string.IsNullOrEmpty(Request.Form["end-date"]))
-              {
-                  endDate = DateTime.Parse(Request.Form["end-date"]);
-              }*/
-           
-            // Create a new connection to the database
+          
             string connectionString = "server=localhost;user id=root;database=homerental";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
@@ -128,10 +122,8 @@ namespace HomeRentalApp
             command.Parameters.AddWithValue("@TotalRent", totalRent);
             command.Parameters.AddWithValue("@PhoneNo", phoneno);
 
-            // Execute the SQL command
             command.ExecuteNonQuery();
 
-            // Close the database connection
             connection.Close();
         }
 

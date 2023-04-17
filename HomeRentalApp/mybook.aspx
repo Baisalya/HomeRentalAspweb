@@ -1,10 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="houses.aspx.cs" Inherits="HomeRentalApp.houses" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="mybook.aspx.cs" Inherits="HomeRentalApp.mybook" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-
     <link rel="stylesheet" href="assets1/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"/>
     <link rel="stylesheet" href="assets1/fonts/fontawesome-all.min.css"/>
@@ -109,43 +108,47 @@
                                     <div class="text-md-end dataTables_filter" id="dataTable_filter"><label class="form-label"><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search"/></label></div>
                                 </div>
                             </div>
-                              <form id="form1" runat="server">
-                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
-                            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
-                             <Columns>
-                              <asp:BoundField DataField="home_name" HeaderText="Home Name" />
-                              <asp:BoundField DataField="price_per_month" HeaderText="Price Per Month" DataFormatString="{0:C}" />
-                                 <asp:TemplateField HeaderText="Check">
-                              <ItemTemplate>
-                               <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href='<%# "house.aspx?home_id=" + Eval("home_id") %>'>&nbsp;Check</a>
-                              </ItemTemplate>
-                              </asp:TemplateField>
-                              <asp:TemplateField HeaderText="Book">
-                              <ItemTemplate>
-                               <a class="btn btn-primary btn-sm d-none d-sm-inline-block" role="button" href='<%# "booking.aspx?home_id=" + Eval("home_id") %>'>&nbsp;Book</a>
-                              </ItemTemplate>
-                              </asp:TemplateField>
-                               </Columns>
-                               </asp:GridView>
+                            <form id="form1" runat="server">
+                         <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+    <Columns>
+        <asp:BoundField DataField="booking_id" HeaderText="Booking ID" />
+        <asp:BoundField DataField="home_name" HeaderText="Home Name" />
+        <asp:BoundField DataField="city_name" HeaderText="City Name" />
+        <asp:BoundField DataField="start_date" HeaderText="Start Date" DataFormatString="{0:MM/dd/yyyy}" />
+        <asp:BoundField DataField="end_date" HeaderText="End Date" DataFormatString="{0:MM/dd/yyyy}" />
+        <asp:BoundField DataField="monthly_rent" HeaderText="Monthly Rent" DataFormatString="{0:C}" />
+        <asp:BoundField DataField="total_rent" HeaderText="Total Rent" DataFormatString="{0:C}" />
+        <asp:TemplateField HeaderText="Action">
+            <ItemTemplate>
+               
+            </ItemTemplate>
+        </asp:TemplateField>
+    </Columns>
+                     <EmptyDataTemplate>
+        <div class="alert alert-info">No records found.</div>
+    </EmptyDataTemplate>
+</asp:GridView>
 
-            <div class="row">
-                <div class="col-md-6 align-self-center">
-                    <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
-                </div>
-                <div class="col-md-6">
-                    <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
-                        <ul class="pagination">
-                            <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+
+    <div class="row">
+        <div class="col-md-6 align-self-center">
+            <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
         </div>
-    </form>
+        <div class="col-md-6">
+            <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+ </form>
 
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
@@ -159,4 +162,3 @@
     <script src="assets1/js/theme.js"></script>
 </body>
 </html>
-

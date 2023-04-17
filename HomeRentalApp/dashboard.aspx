@@ -23,6 +23,7 @@
                     <li class="nav-item"><a class="nav-link active" href="dashboard.aspx"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="profile.aspx"><i class="fas fa-user"></i><span>Profile</span></a></li>
                     <li class="nav-item"><a class="nav-link" href="table.aspx"><i class="fas fa-table"></i><span>Houses</span></a></li>
+                     <li class="nav-item"><a class="nav-link" href="mybook.aspx"><i class="fas fa-table"></i><span>MYHome</span></a></li>
                     
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>

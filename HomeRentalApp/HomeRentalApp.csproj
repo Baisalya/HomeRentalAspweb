@@ -105,9 +105,11 @@
     <Content Include="booking.aspx" />
     <Content Include="contact-us.aspx" />
     <Content Include="dashboard.aspx" />
+    <Content Include="house.aspx" />
     <Content Include="houses.aspx" />
     <Content Include="index.aspx" />
     <Content Include="login.aspx" />
+    <Content Include="mybook.aspx" />
     <Content Include="profile.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="table.aspx" />
@@ -135,6 +137,13 @@
     <Compile Include="dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="house.aspx.cs">
+      <DependentUpon>house.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="house.aspx.designer.cs">
+      <DependentUpon>house.aspx</DependentUpon>
+    </Compile>
     <Compile Include="houses.aspx.cs">
       <DependentUpon>houses.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -155,6 +164,13 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mybook.aspx.cs">
+      <DependentUpon>mybook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mybook.aspx.designer.cs">
+      <DependentUpon>mybook.aspx</DependentUpon>
     </Compile>
     <Compile Include="profile.aspx.cs">
       <DependentUpon>profile.aspx</DependentUpon>

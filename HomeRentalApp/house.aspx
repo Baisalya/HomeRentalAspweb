@@ -1,3 +1,5 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="house.aspx.cs" Inherits="HomeRentalApp.house" %>
+
 <!DOCTYPE html>
 <html>
 
