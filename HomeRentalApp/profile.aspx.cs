@@ -12,13 +12,12 @@ namespace HomeRentalApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Check if the user is logged in
+           
             if (Session["UserName"] == null)
             {
                 Response.Redirect("login.aspx");
             }
 
-            // Handle form submission
             if (Request.Params["saveBtn"] != null)
             {
                 string username = Request.Params["username"];

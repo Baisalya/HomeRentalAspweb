@@ -87,7 +87,7 @@
             </div>
         </div>
         <div class="footer-copyright">
-            <p>© 2022 Copyright Text</p>
+            <p>© 2023 PassonatetechLife</p>
         </div>
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

@@ -23,7 +23,7 @@ namespace HomeRentalApp
                 string email = nv["email"];
                 string message = nv["message"];
                 
-                string constring = "server=localhost;uid=root;pwd=Kunmun@2001;database=studentdb";
+                string constring = "server=localhost;user id=root;database=homerental";
                 MySqlConnection con = new MySqlConnection();
                 con.ConnectionString = constring;
                 con.Open();

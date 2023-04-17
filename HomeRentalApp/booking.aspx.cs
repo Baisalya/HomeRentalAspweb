@@ -82,7 +82,7 @@ namespace HomeRentalApp
         }
         protected void btnConfirmBooking_Click(object sender, EventArgs e)
         {
-            // Read the form values
+           
             NameValueCollection nv = Request.Form;
             int homeId = int.Parse(Request.QueryString["home_id"]);
             int renterId = (int)Session["UserId"];
@@ -93,7 +93,7 @@ namespace HomeRentalApp
             decimal monthlyRent = decimal.Parse(Request.Form["txtPricePerMonth"]);
             decimal totalRent = decimal.Parse(Request.Form["txttotalrent"]);
             int phoneno = int.Parse(exampleNumberInput.Value);
-            int noOfMonths = int.Parse(noofmonths.Value); // Get the number of months entered by the user
+            int noOfMonths = int.Parse(noofmonths.Value); 
             if (DateTime.TryParseExact(txtStartDate.Value, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out startDate)
                 && DateTime.TryParseExact(txtEndDate.Value, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out endDate))
             {

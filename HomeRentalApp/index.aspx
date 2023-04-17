@@ -27,6 +27,8 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.aspx">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact-us.aspx">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="terms.html">Terms&Condition</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact-us.aspx">Contact Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="login.aspx">Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="registration.aspx">Register</a></li>
                 </ul>
